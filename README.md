@@ -1,5 +1,7 @@
 # SSH Login‐Attempt Analyzer
 
+For my final Python project I built a small Python tool that parses an SSH auth.log export CSV, detects brute-force login attempts, and produces both a CSV report and a bar-chart of offending IPs. This combines everything we’ve learned from string parsing and functions to classes, modules, standard-library I/O, date/time math, and even some of Matplotlib plotting.
+
 ## Problem
 
 \- Detect brute‐force SSH login attempts from an auth‐log CSV.
