@@ -1,14 +1,12 @@
 # SSH Login‐Attempt Analyzer
 
-
-
-# Problem
+## Problem
 
 \- Detect brute‐force SSH login attempts from an auth‐log CSV.
 
 
 
-# Solution
+## Solution
 
 \- **parser.py**: read & parse log into `LogEntry`
 
@@ -19,13 +17,40 @@
 \- **cli.py**: user‐friendly CLI with `argparse`
 
 
+## Installation
 
-# Usage
+1. Clone the repo
 
-```cmd
+    ```bash
+    git clone https://github.com/jaschyns/ssh-login-analyzer.git
+    cd ssh-login-analyzer
+    ```
 
+2. Create and activate a virtual environment
+
+    ```bash
+    python -m venv venv
+
+    # Windows
+    venv\Scripts\activate
+
+    # macOS / Linux
+    source venv/bin/activate
+    ```
+
+3. Install dependencies
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+
+## Usage
+  
+```
 python -m ssh_analyzer.cli --log data\auth_sample.csv --threshold 5 --window 60 --out alerts.csv --plot alerts.png
 ```
+      
 
 --log : Path to your SSH log CSV
 
@@ -37,7 +62,7 @@ python -m ssh_analyzer.cli --log data\auth_sample.csv --threshold 5 --window 60 
 
 --plot : (Optional) Output bar-chart PNG file path
 
-# Sample Data Format (data/auth_sample.csv)
+## Sample Data Format (data/auth_sample.csv)
 
 ```
 timestamp,user,ip,status
@@ -46,6 +71,6 @@ timestamp,user,ip,status
 2025-06-29 14:13:20,jdoe,192.168.1.200,Accepted
 ```
 
-# License / Author
+## License / Author
 Justin Schyns · USF Information Science & Security Senior
 Feel free to fork or adapt this tool.
