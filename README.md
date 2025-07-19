@@ -42,13 +42,15 @@
 
     ```bash
     pip install -r requirements.txt
+
+    python -m pip install matplotlib
     ```
 
 
 ## Usage
   
 ```
-python -m ssh_analyzer.cli --log data\auth_sample.csv --threshold 5 --window 60 --out alerts.csv --plot alerts.png
+python -m ssh_analyzer.cli --log data\auth_sample.csv --threshold 2 --window 60 --out alerts.csv --plot alerts.png
 ```
       
 
