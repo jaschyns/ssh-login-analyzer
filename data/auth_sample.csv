@@ -1,0 +1,4 @@
+timestamp,user,ip,status
+2025-06-29 14:12:11,root,192.168.1.100,Failed
+2025-06-29 14:12:14,admin,192.168.1.100,Failed
+2025-06-29 14:13:20,jdoe,192.168.1.200,Accepted
