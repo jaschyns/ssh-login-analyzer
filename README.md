@@ -20,21 +20,32 @@
 
 
 
-\# Usage
+# Usage
 
-```bash
+```cmd
 
-python -m ssh\_analyzer.cli \
+python -m ssh_analyzer.cli --log data\auth_sample.csv --threshold 5 --window 60 --out alerts.csv --plot alerts.png
+```
 
---log data/auth\_sample.csv \
+--log : Path to your SSH log CSV
 
---threshold 5 \
+--threshold : Number of failed attempts to trigger an alert
 
---window 60 \
+--window : Time window (in seconds) for counting failures
 
---out alerts.csv \
+--out : Output CSV file path
 
---plot alerts.png
+--plot : (Optional) Output bar-chart PNG file path
 
+# Sample Data Format (data/auth_sample.csv)
 
+```
+timestamp,user,ip,status
+2025-06-29 14:12:11,root,192.168.1.100,Failed
+2025-06-29 14:12:14,admin,192.168.1.100,Failed
+2025-06-29 14:13:20,jdoe,192.168.1.200,Accepted
+```
 
+# License / Author
+Justin Schyns · USF Information Science & Security Senior
+Feel free to fork or adapt this tool.
